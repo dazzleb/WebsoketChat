@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Websocket" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="닉네임을 적어주세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Prf-ig-XR1">
+                                <rect key="frame" x="20" y="11" width="335" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="yUU-sc-VBX">
+                                <rect key="frame" x="0.0" y="65" width="375" height="527.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ijd-Sz-G8V" userLabel="TalkStackView">
+                                <rect key="frame" x="20" y="612.5" width="335" height="34.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="한 마디 해보세요." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kfI-hG-x8U">
+                                        <rect key="frame" x="0.0" y="0.0" width="273" height="34.5"/>
+                                        <color key="textColor" name="AccentColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="userEditingText:" destination="BYZ-38-t0r" eventType="editingChanged" id="ANd-nd-bqX"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNz-1T-CoF">
+                                        <rect key="frame" x="288" y="0.0" width="47" height="34.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="47" id="lfV-rB-HUR"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="✍🏻">
+                                            <color key="baseBackgroundColor" systemColor="systemGray2Color"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="writeOkButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4vr-VD-3zB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yUU-sc-VBX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="442-eh-Hta"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ijd-Sz-G8V" secondAttribute="bottom" constant="20" id="87f-hW-QPT"/>
+                            <constraint firstItem="Prf-ig-XR1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="QV7-ar-Bih"/>
+                            <constraint firstItem="yUU-sc-VBX" firstAttribute="top" secondItem="Prf-ig-XR1" secondAttribute="bottom" constant="20" id="Ut4-jd-RD2"/>
+                            <constraint firstItem="ijd-Sz-G8V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="V5E-I1-OcG"/>
+                            <constraint firstItem="yUU-sc-VBX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XBb-7q-Hkk"/>
+                            <constraint firstItem="ijd-Sz-G8V" firstAttribute="top" secondItem="yUU-sc-VBX" secondAttribute="bottom" constant="20" id="b2B-QM-YKx"/>
+                            <constraint firstItem="Prf-ig-XR1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="11" id="gUA-q6-g9i"/>
+                            <constraint firstItem="ijd-Sz-G8V" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="iCW-Jw-Jnc"/>
+                            <constraint firstItem="Prf-ig-XR1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="lSN-Ab-ZP2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nickNameTF" destination="Prf-ig-XR1" id="c7y-3L-9KP"/>
+                        <outlet property="talkToTableView" destination="yUU-sc-VBX" id="WRU-ag-nk8"/>
+                        <outlet property="userInputText" destination="kfI-hG-x8U" id="mR0-Rj-vs6"/>
+                        <outlet property="writeButton" destination="rNz-1T-CoF" id="nMO-bm-zM6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="-34.632683658170919"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
